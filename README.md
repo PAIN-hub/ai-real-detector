@@ -1,4 +1,4 @@
-#AI-vs-Real Detector
+# AI-vs-Real Detector
 
 > No fluff. This repo packages a small image detector that returns Real / AI-Generated / Uncertain and runs the model from model/EfficientNet_model.h5. If the model is missing it auto-downloads from Google Drive. Metadata (EXIF) is used as a fallback when the model is uncertain.
 
@@ -95,7 +95,7 @@ Final Suggestion: Likely AI (metadata missing/strange)
 
 4. EXIF detection inspects Model and Software fields to bias the suggestion.
 
-*Developer notes*
+**Developer notes**
 
 Model download behaviour
 
@@ -111,7 +111,7 @@ Replace FILE_ID in the file, or
 Set AI_MODEL_FILE_ID in your environment before running.
 
 
-Input size
+**Input size**
 
 The shipped model expects 32×32 images (CIFAKE-style). If you substitute another model, update the preprocess target_size inside ai_real_detector/predictor.py.
 
