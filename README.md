@@ -1,4 +1,4 @@
-# ## AI-vs-Real Detector
+#AI-vs-Real Detector
 
 > No fluff. This repo packages a small image detector that returns Real / AI-Generated / Uncertain and runs the model from model/EfficientNet_model.h5. If the model is missing it auto-downloads from Google Drive. Metadata (EXIF) is used as a fallback when the model is uncertain.
 
@@ -85,17 +85,17 @@ Final Suggestion: Likely AI (metadata missing/strange)
 
 3. If probability p:
 
-`` p <= 0.4 → Real ```
+`` p <= 0.4 → Real``
 
 `` p >= 0.6 → AI-Generated``
 
-`` else → Uncertain and run EXIF metadata check for a “final suggestion.” ``
+``else → Uncertain and run EXIF metadata check for a “final suggestion.”``
 
 
 
 4. EXIF detection inspects Model and Software fields to bias the suggestion.
 
-Developer notes
+*Developer notes*
 
 Model download behaviour
 
