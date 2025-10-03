@@ -1,3 +1,37 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-real-detector"
+version = "0.1.0"
+description = "Detect whether an image is AI-generated or real using EfficientNet + metadata analysis."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Pain", email = "beelyboss100@gmail.com" }
+]
+requires-python = ">=3.9"
+
+dependencies = [
+  "tensorflow>=2.15.0,<2.21.0",
+  "numpy",
+  "Pillow",
+  "gdown",
+  "exifread"
+]
+
+[project.urls]
+Homepage = "https://github.com/PAIN-hub/ai-real-detector"
+Repository = "https://github.com/PAIN-hub/ai-real-detector/issues"
+
+[project.scripts]
+ai-detector = "ai_real_detector.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["ai_real_detector"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
