@@ -24,7 +24,7 @@
 ### 2. Clone & enter dir
 
 ```
-git clone https://github.com/YOURUSER/ai-real-detector.git
+git clone https://github.com/PAIN-hub/ai-real-detector.git
 cd ai-real-detector
 ```
 
